@@ -244,6 +244,103 @@
     
 
     <script type="text/javascript">
+      function uptype(){
+
+        let appkey="dimip0w6";
+
+        let itemkey="down";
+
+        let type = document.getElementById('input');
+
+        let itemval;
+
+        if(type===document.activeElement)
+
+        {
+
+          itemval=1;
+
+        }
+
+        else{
+
+          itemval=0;
+
+        }
+
+        
+
+        console.log(itemval);
+
+        $.ajax({
+
+          type: "POST",
+
+          url:
+
+            "https://keyvalue.immanuel.co/api/KeyVal/UpdateValue/" +
+
+            appkey +
+
+            "/" +
+
+            itemkey +
+
+            "/" +
+
+            itemval,
+
+          contentType: false,
+
+          processData: false,
+
+        })
+
+          .done(function (data) {
+
+           
+
+          })
+
+          .fail(function (err) {});
+
+      }
+
+        
+
+      
+
+      function downtype() {
+
+        let type = document.getElementsByClassName("bouncing-loader");
+
+        fetch("https://keyvalue.immanuel.co/api/KeyVal/GetValue/2aiei0jz/up")
+
+          .then((response) => response.json())
+
+          .then((data) => {
+
+            if(data==1){
+
+            type[0].style.visibility="visible";
+
+            
+
+            }
+
+           
+
+            else{
+
+            type[0].style.visibility='hidden';
+
+            }
+
+             console.log(data);
+
+          });
+
+      }
 
       function updateScroll(){
 
@@ -400,8 +497,10 @@ let old;
             old=data;
 
    });
+       downtype();
 
- },1000);
+          uptype();
+ },100);
 
     </script>
 
