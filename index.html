@@ -538,8 +538,15 @@ let old;
 
     <div id="input" contenteditable="true"></div>
 
-     <button class="send" onclick="update('2y8etr45','khu')" >Send</button>
-
+     <button id="send" class="send" onclick="update('2y8etr45','khu')" >Send</button>
+    
+    <script type="text/javascript" charset="utf-8">
+            document.getElementById('send').addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {  
+      update('2y8etr45','khu');
+    }
+  });
+    </script>
   </body>
 
 </html>
