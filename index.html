@@ -244,6 +244,32 @@
 
     
 
+    <div id="d" onclick="updateScrolltop()">
+
+      ^
+
+    </div>
+
+    <div id="msg" ></div>
+
+   <div id="typing" >
+
+      <div class="bouncing-loader">
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+      </div>
+
+    </div>
+
+    <div id="input" contenteditable="true"></div>
+
+     <button id="send" class="send" onclick="update('2y8etr45','khu')" >Send</button>
+
     <script type="text/javascript">
       let title = document.title;
 
@@ -516,30 +542,11 @@ let old;
           uptype();
  },1000);
 
-    </script>
+    
 
     
 
-    <div id="d" onclick="updateScrolltop()">
-
-      ^
-
-    </div>
-
-    <div id="msg" ></div>
-
-   <div id="typing" >
-      <div class="bouncing-loader">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-
-    <div id="input" contenteditable="true"></div>
-
-     <button id="send" class="send" onclick="update('2y8etr45','khu')" >Send</button>
-    
+  
     <script type="text/javascript" charset="utf-8">
             document.getElementById('send').addEventListener("keydown", function (e) {
     if (e.key === "Enter") {  
