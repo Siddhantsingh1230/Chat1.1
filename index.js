@@ -137,7 +137,7 @@ function updateValue(appkey, itemkey, itemval) {
   })
 
     .done(function (data) {
-      getValue("2y8etr45", "khu");
+      getValue(appkey, itemkey);
     })
 
     .fail(function (err) {});
