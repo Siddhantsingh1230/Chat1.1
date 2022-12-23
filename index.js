@@ -116,7 +116,11 @@ function getValue(appkey, itemkey) {
       updateScroll();
     })
 
-    .fail(function (err) {});
+    .fail(function (err) {
+  alert("Error 🚫");
+
+    document.location.reload();
+  });
 }
 
 function updateValue(appkey, itemkey, itemval) {
