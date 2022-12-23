@@ -117,9 +117,9 @@ function getValue(appkey, itemkey) {
     })
 
     .fail(function (err) {
-  alert("Error 🚫");
 
-    document.location.reload();
+
+
   });
 }
 
